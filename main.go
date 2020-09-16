@@ -2,16 +2,21 @@ package main
 
 import (
 	closuers "github.com/sanketgupta07/go-practice/closures"
+	"github.com/sanketgupta07/go-practice/recursion"
 	multiplevalue "github.com/sanketgupta07/go-practice/return-multiple-value"
 	variadic "github.com/sanketgupta07/go-practice/variadic_function"
 
 	"log"
 )
 
+//Functions are First-class citizen in Go
+var l = log.Println
+
 func main() {
 
-	log.Println("Main function")
-	log.Println(multiplevalue.MultipleValue())
-	log.Println("Sum: ", variadic.VariadicFunc(2, 5))
-	log.Println("Calling CallClosures", closuers.CallClosures(10))
+	l("Main function")
+	l(multiplevalue.MultipleValue())
+	l("Variadic- Sum: ", variadic.VariadicFunc(2, 5))
+	l("Closures- CallClosures(10)", closuers.CallClosures(10))
+	l("Recursion- Factorial (7): ", recursion.Factorial(7))
 }

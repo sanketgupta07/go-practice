@@ -3,6 +3,8 @@ go tryouts for learning
 
 Ref: https://gobyexample.com
 
+Added - Makefile
+
 Added - unit testing
     To run all test cases as test suite `go test -v`
     To run one test case  `go test -v -run <test-function-name>`
@@ -16,3 +18,8 @@ Variadic functions can be called with any number of trailing arguments. For exam
 
 3. Closures: Go supports anonymous functions, which can form closures. Anonymous functions are useful when you want to define a function inline without having to name it.
 -- added go vet test for unreachable code in closures.go
+
+4. Recursion: Go support recusrion.
+
+    *   Factorial
+

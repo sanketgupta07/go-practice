@@ -4,6 +4,7 @@ import (
 	"testing"
 
 	closures "github.com/sanketgupta07/go-practice/closures"
+	recursion "github.com/sanketgupta07/go-practice/recursion"
 
 	variadic "github.com/sanketgupta07/go-practice/variadic_function"
 
@@ -32,6 +33,14 @@ func TestVariadicFunc(t *testing.T) {
 func TestCallClosuers(t *testing.T) {
 	expected := 8
 	actual := closures.CallClosures(3)
+	if expected != actual {
+		t.Errorf("return value is not equal to actual.")
+	}
+}
+
+func TestFactorial(t *testing.T) {
+	expected := 120
+	actual := recursion.Factorial(5)
 	if expected != actual {
 		t.Errorf("return value is not equal to actual.")
 	}
