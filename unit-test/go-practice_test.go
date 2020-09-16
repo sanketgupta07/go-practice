@@ -3,8 +3,11 @@ package test
 import (
 	"testing"
 
+<<<<<<< HEAD
 	closures "github.com/sanketgupta07/go-practice/closures"
 
+=======
+>>>>>>> cba3d14966d59ac5e65ad458deb1bfbcf2b3173f
 	variadic "github.com/sanketgupta07/go-practice/variadic_function"
 
 	multipleValue "github.com/sanketgupta07/go-practice/return-multiple-value"
@@ -28,6 +31,7 @@ func TestVariadicFunc(t *testing.T) {
 		t.Errorf("return value is not equal to actual.")
 	}
 }
+<<<<<<< HEAD
 
 func TestCallClosuers(t *testing.T) {
 	expected := 8
@@ -36,3 +40,5 @@ func TestCallClosuers(t *testing.T) {
 		t.Errorf("return value is not equal to actual.")
 	}
 }
+=======
+>>>>>>> cba3d14966d59ac5e65ad458deb1bfbcf2b3173f
