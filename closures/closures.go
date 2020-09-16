@@ -10,6 +10,14 @@ func closures(i int) func() int {
 		i++
 		return i
 	}
+	// log.Println("not reachable")
+	// return closures(5)
+	// uncomment above statements and run go vet ./... to see the out put for not reachable code
+	// sanket@Khachedu MINGW64 ~/go/src/github.com/sanketgupta07/go-practice (master)
+	// $ go vet ./...
+	// # github.com/sanketgupta07/go-practice/closures
+	// closures\closures.go:13:2: unreachable code
+
 }
 
 func CallClosures(i int) int {

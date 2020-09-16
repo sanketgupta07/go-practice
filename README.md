@@ -15,3 +15,4 @@ Go has built-in support for multiple return values. This feature is used often i
 Variadic functions can be called with any number of trailing arguments. For example, fmt.Println is a common variadic function.
 
 3. Closures: Go supports anonymous functions, which can form closures. Anonymous functions are useful when you want to define a function inline without having to name it.
+-- added go vet test for unreachable code in closures.go
