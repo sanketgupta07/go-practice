@@ -18,5 +18,6 @@ func main() {
 	l(multiplevalue.MultipleValue())
 	l("Variadic- Sum: ", variadic.VariadicFunc(2, 5))
 	l("Closures- CallClosures(10)", closuers.CallClosures(10))
-	l("Recursion- Factorial (7): ", recursion.Factorial(7))
+	l("Recursion 1- Factorial (7): ", recursion.Factorial(7))
+	l("Recursion 2- Fibonacci (5): ", recursion.CallFibonacci(5))
 }

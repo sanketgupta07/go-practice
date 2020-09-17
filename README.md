@@ -22,4 +22,5 @@ Variadic functions can be called with any number of trailing arguments. For exam
 4. Recursion: Go support recusrion.
 
     *   Factorial
+    *   Fibonacci
 

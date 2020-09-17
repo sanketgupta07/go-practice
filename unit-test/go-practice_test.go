@@ -45,3 +45,16 @@ func TestFactorial(t *testing.T) {
 		t.Errorf("return value is not equal to actual.")
 	}
 }
+
+func TestFibonacci(t *testing.T) {
+	n := 5
+	expected := []int{}
+	expected = append(expected, 0, 1, 1, 2, 3)
+	actual := recursion.CallFibonacci(n)
+	for i := 0; i < n; i++ {
+		if expected[i] != actual[i] {
+			t.Errorf("return value is not equal to actual.")
+		}
+
+	}
+}
