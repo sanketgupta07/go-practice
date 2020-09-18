@@ -17,6 +17,7 @@ run:build
 #make git-update -e m=<comment>
 m="update"
 git-update:
+	go fmt ./...
 	git status
 	git add -A
 	git commit -m "${m}"
