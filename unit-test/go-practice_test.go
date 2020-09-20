@@ -3,6 +3,8 @@ package test
 import (
 	"testing"
 
+	err "github.com/sanketgupta07/go-practice/err"
+
 	closures "github.com/sanketgupta07/go-practice/closures"
 	recursion "github.com/sanketgupta07/go-practice/recursion"
 
@@ -56,5 +58,22 @@ func TestFibonacci(t *testing.T) {
 			t.Errorf("return value is not equal to actual.")
 		}
 
+	}
+}
+
+func TestError(t *testing.T) {
+	i1, i2 := 5, -3
+	expected1 := 8
+	actual1, er := err.ErrorTest(i1)
+
+	expected2 := -3
+	actual2, er := err.ErrorTest(i2)
+
+	if expected1 != actual1 && er == nil {
+		t.Errorf("return value is not equal to actual.")
+	}
+
+	if expected2 != actual2 && er != nil {
+		t.Errorf("return value is not equal to actual.")
 	}
 }

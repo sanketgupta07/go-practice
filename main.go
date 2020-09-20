@@ -2,7 +2,8 @@ package main
 
 import (
 	closuers "github.com/sanketgupta07/go-practice/closures"
-	"github.com/sanketgupta07/go-practice/recursion"
+	err "github.com/sanketgupta07/go-practice/err"
+	recursion "github.com/sanketgupta07/go-practice/recursion"
 	multiplevalue "github.com/sanketgupta07/go-practice/return-multiple-value"
 	variadic "github.com/sanketgupta07/go-practice/variadic_function"
 
@@ -20,4 +21,13 @@ func main() {
 	l("Closures- CallClosures(10)", closuers.CallClosures(10))
 	l("Recursion 1- Factorial (7): ", recursion.Factorial(7))
 	l("Recursion 2- Fibonacci (5): ", recursion.CallFibonacci(5))
+	//Error call
+	i, err := err.ErrorTest(-8)
+	l("Error call :", i)
+	if err != nil {
+		l(err.Error())
+	} else {
+		l(i)
+	}
+
 }
