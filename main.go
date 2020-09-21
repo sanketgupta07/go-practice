@@ -22,10 +22,19 @@ func main() {
 	l("Recursion 1- Factorial (7): ", recursion.Factorial(7))
 	l("Recursion 2- Fibonacci (5): ", recursion.CallFibonacci(5))
 	//Error call
-	i, err := err.ErrorTest(-8)
+	i, er1 := err.ErrorTest(-8)
 	l("Error call :", i)
-	if err != nil {
-		l(err.Error())
+	if er1 != nil {
+		l(er1.Error())
+	} else {
+		l(i)
+	}
+
+	//CustomTypeError call
+	i, er2 := err.CustomErrExample(-7)
+	l("Error call :", i)
+	if er2 != nil {
+		l(er2.Error())
 	} else {
 		l(i)
 	}
