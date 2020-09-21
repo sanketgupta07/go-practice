@@ -39,4 +39,10 @@ func main() {
 		l(i)
 	}
 
+	//Use data from error type
+	if ae, ok := er2.(*err.CustomTypeErr); ok {
+		l(ae.Arg)
+		l(ae.Prob)
+	}
+
 }
