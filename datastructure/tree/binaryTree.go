@@ -7,7 +7,7 @@ import (
 )
 
 /*
-Node ...
+TreeNode ...
 Simple Node
 */
 type TreeNode struct {
@@ -16,8 +16,12 @@ type TreeNode struct {
 	value int64
 }
 
+/*
+BinaryTree ...
+Binary tree
+*/
 type BinaryTree struct {
-	root *TreeNode
+	Root *TreeNode
 }
 
 /*
@@ -25,14 +29,14 @@ Insert ...
 Insert a node in binary tree.
 */
 func (t *BinaryTree) Insert(i int64) *BinaryTree {
-	if t.root == nil {
-		t.root = &TreeNode{
+	if t.Root == nil {
+		t.Root = &TreeNode{
 			left:  nil,
 			right: nil,
 			value: i,
 		}
 	} else {
-		t.root.insertNode(i)
+		t.Root.insertNode(i)
 	}
 	return t
 }
@@ -41,7 +45,7 @@ func (node *TreeNode) insertNode(value int64) {
 	if node == nil {
 		log.Println("node is empty. can not add child to an null node")
 		return
-	} else if node.value <= value {
+	} else if value <= node.value {
 		if node.left == nil {
 			node.left = &TreeNode{
 				left:  nil,
@@ -64,7 +68,7 @@ func (node *TreeNode) insertNode(value int64) {
 	}
 }
 
-func Print(w io.Writer, node *TreeNode, ns int, ch rune) {
+func PrintTree(w io.Writer, node *TreeNode, ns int, ch rune) {
 	if node == nil {
 		return
 	}
@@ -73,8 +77,8 @@ func Print(w io.Writer, node *TreeNode, ns int, ch rune) {
 		fmt.Fprint(w, " ")
 	}
 	fmt.Fprintf(w, "%c:%v\n", ch, node.value)
-	print(w, node.left, ns+2, 'L')
-	print(w, node.right, ns+2, 'R')
+	PrintTree(w, node.left, ns+2, 'L')
+	PrintTree(w, node.right, ns+2, 'R')
 }
 
 /*

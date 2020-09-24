@@ -1,7 +1,10 @@
 package main
 
 import (
+	"os"
+
 	closuers "github.com/sanketgupta07/go-practice/closures"
+	tree "github.com/sanketgupta07/go-practice/datastructure/tree"
 	err "github.com/sanketgupta07/go-practice/err"
 	recursion "github.com/sanketgupta07/go-practice/recursion"
 	multiplevalue "github.com/sanketgupta07/go-practice/return-multiple-value"
@@ -44,5 +47,10 @@ func main() {
 		l(ae.Arg)
 		l(ae.Prob)
 	}
+
+	//Insert BinaryTree
+	t := &tree.BinaryTree{}
+	t.Insert(10).Insert(20).Insert(5).Insert(4).Insert(25).Insert(7).Insert(15).Insert(1)
+	tree.PrintTree(os.Stdout, t.Root, 0, 'M')
 
 }
