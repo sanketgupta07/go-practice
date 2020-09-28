@@ -1,7 +1,10 @@
 package test
 
 import (
+	"fmt"
 	"testing"
+
+	iface "github.com/sanketgupta07/go-practice/interface"
 
 	err "github.com/sanketgupta07/go-practice/err"
 
@@ -76,4 +79,28 @@ func TestError(t *testing.T) {
 	if expected2 != actual2 && er != nil {
 		t.Errorf("return value is not equal to actual.")
 	}
+}
+
+func TestInterface(t *testing.T) {
+	var ea1, ep1, ea2, ep2 float64
+	ea1 = 10
+	ep1 = 14
+
+	ea2 = 314.1592653589793
+	ep2 = 62.83185307179586
+	rect := iface.Rect{Length: 2, Width: 5}
+	circle := iface.Circle{Radius: 10}
+
+	a1, p1 := iface.Measure(rect)
+	a2, p2 := iface.Measure(circle)
+
+	if ea1 != a1 && ep1 != p1 {
+		fmt.Println(a1, p1)
+		t.Errorf("return value is not equal to actual.")
+	}
+
+	if ea2 != a2 && ep2 != p2 {
+		t.Errorf("return value is not equal to actual.")
+	}
+
 }

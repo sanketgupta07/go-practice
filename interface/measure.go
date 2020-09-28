@@ -1,9 +1,8 @@
 package iface
 
-import "fmt"
-
-func Measure(g Geometry) {
-	fmt.Println(g)
-	fmt.Println(g.Area())
-	fmt.Println(g.Peri())
+// Measure Returns Area and Perimeter
+func Measure(g Geometry) (float64, float64) {
+	a := g.Area()
+	p := g.Peri()
+	return a, p
 }

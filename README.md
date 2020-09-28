@@ -26,3 +26,5 @@ Variadic functions can be called with any number of trailing arguments. For exam
 
 5. Error: Added test error scenario 
 
+
+6. Added Interface

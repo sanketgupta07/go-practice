@@ -59,7 +59,9 @@ func main() {
 	rect := iface.Rect{Length: 10, Width: 5}
 	circle := iface.Circle{Radius: 10}
 
-	iface.Measure(rect)
-	iface.Measure(circle)
+	rect_area, rect_peri := iface.Measure(rect)
+	circle_area, circle_peri := iface.Measure(circle)
 
+	l("Rect Area: and  Rect Perimeter:", rect_area, rect_peri)
+	l("Circle Area: and Circle Perimeter: ", circle_area, circle_peri)
 }
