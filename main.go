@@ -3,6 +3,8 @@ package main
 import (
 	"os"
 
+	iface "github.com/sanketgupta07/go-practice/interface"
+
 	closuers "github.com/sanketgupta07/go-practice/closures"
 	tree "github.com/sanketgupta07/go-practice/datastructure/tree"
 	err "github.com/sanketgupta07/go-practice/err"
@@ -52,5 +54,12 @@ func main() {
 	t := &tree.BinaryTree{}
 	t.Insert(10).Insert(20).Insert(5).Insert(4).Insert(25).Insert(7).Insert(15).Insert(1)
 	tree.PrintTree(os.Stdout, t.Root, 0, 'M')
+
+	//Run interface
+	rect := iface.Rect{Length: 10, Width: 5}
+	circle := iface.Circle{Radius: 10}
+
+	iface.Measure(rect)
+	iface.Measure(circle)
 
 }
