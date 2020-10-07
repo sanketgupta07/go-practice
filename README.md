@@ -6,8 +6,11 @@ Ref: https://gobyexample.com
 Added - Makefile
 
 Added - unit testing
+
     To run all test cases as test suite `go test -v`
+
     To run one test case  `go test -v -run <test-function-name>`
+
     To run all the testcase files recursively `go test ./...`
 
 1. Multiple value return: 
