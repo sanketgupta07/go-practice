@@ -23,6 +23,9 @@ git-update:
 	git commit -m "${m}"
 	git push
 
+docker-build: build
+	docker build -t go-practice:latest -f Scratch_Dockerfile .
+	docker run go-practice
 #layering
 #all:vet test run
 
